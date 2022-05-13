@@ -18,8 +18,6 @@ app.get('/', (req, res) => {
     res.send("hello world")
 });
 
-const george = "George"
-console.log(george)
 
 
 module.exports = app;
