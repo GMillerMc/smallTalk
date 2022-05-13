@@ -1,6 +1,6 @@
-#Small Talk
+# Small Talk
 
-##Installation
+## Installation
 - `clone this repo`
 - `npm install`
 - `npm run dev`
