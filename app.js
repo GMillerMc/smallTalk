@@ -7,6 +7,8 @@ const cors = require('cors');
 //create a new express application
 const app = express();
 
+const Post = require('../smallTalk_Server/post');
+
 
 // allows for json to be read
 app.use(express.json()) 
@@ -16,6 +18,10 @@ app.use(cors());
 //sets homepage to html
 app.get('/', (req, res) => {
     res.send("hello world")
+});
+
+app.get('/:id', (req, res) => {
+    res.send ("hello")  
 });
 
 app.post('/new', (req, res) => {
