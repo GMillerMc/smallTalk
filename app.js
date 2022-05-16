@@ -13,6 +13,8 @@ app.use(express.json())
 app.use(cors());
 
 
+app.use(express.static("public"))
+
 //sets homepage to html
 app.get('/', (req, res) => {
     res.send("hello world")
