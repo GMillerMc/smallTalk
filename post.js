@@ -36,7 +36,7 @@ class Post {
     }
 
     destroy() {
-        const cat = postData.filter((post) => post.id === this.id)[0];
+        const post = postData.filter((post) => post.id === this.id)[0];
         postData.splice(postData.indexOf(post), 1);
     }
 }
