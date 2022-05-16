@@ -8,7 +8,7 @@ const cors = require('cors');
 const app = express();
 
 
-const Post = require('../smallTalk_Server/post');
+const Post = require('./post');
 
 // allows for json to be read
 app.use(express.json()) 
@@ -24,7 +24,14 @@ app.get('/', (req, res) => {
 });
 
 app.get('/:id', (req, res) => {
-    res.send ("hello")  
+    try {
+        const postId = parseInt(req.params.id);
+        const selectedPost = Post.findById(postId);
+        res.send(selectedPost);
+    } catch (err) {
+        console.log(err);
+        res.status(404).send(err);
+    }
 });
 
 app.post('/new', (req, res) => {
