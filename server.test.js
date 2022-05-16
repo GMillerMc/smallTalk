@@ -29,7 +29,7 @@ describe('API server', () => {
 	})
 
 
-	// Test with it (which is the same as test really)
+	
 	it('responds to post with status 201', (done)=>{
 		const postData = {
 			id: "",
@@ -40,9 +40,7 @@ describe('API server', () => {
 			.post('/new')
 			.send(postData)
 			.expect(201)
-			.expect({...postData,}, done) //get back test data and adopted needs to be false
-			// ... is spread operator
-			// I think it creates a copy and appends something to it
+			.expect({...postData,}, done) 
 	})
 
 
