@@ -6,7 +6,9 @@ const cors = require('cors');
 
 //create a new express application
 const app = express();
-const Post = require('./post')
+
+
+const Post = require('../smallTalk_Server/post');
 
 // allows for json to be read
 app.use(express.json()) 
@@ -19,6 +21,10 @@ app.use(express.static("public"))
 app.get('/', (req, res) => {
     const postData = Post.all
     res.send(postData)
+});
+
+app.get('/:id', (req, res) => {
+    res.send ("hello")  
 });
 
 app.post('/new', (req, res) => {
