@@ -8,14 +8,30 @@ const cors = require('cors');
 const app = express();
 
 
+const Post = require('./post');
+
 // allows for json to be read
 app.use(express.json()) 
 app.use(cors());
 
 
+app.use(express.static("public"))
+
 //sets homepage to html
 app.get('/', (req, res) => {
-    res.send("hello world")
+    const postData = Post.all
+    res.send(postData)
+});
+
+app.get('/:id', (req, res) => {
+    try {
+        const postId = parseInt(req.params.id);
+        const selectedPost = Post.findById(postId);
+        res.send(selectedPost);
+    } catch (err) {
+        console.log(err);
+        res.status(404).send(err);
+    }
 });
 
 app.post('/new', (req, res) => {

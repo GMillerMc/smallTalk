@@ -1,7 +1,7 @@
 const postData = [
     { id: 1, text: 'Zelda', react: [":)",":)",":)"], comments: ["Hi!", "hello", "hey"] },
-    { id: 1, text: 'Something', react: [":)",":)",":)"], comments: ["Hi!", "hello", "hey"] },
-    { id: 1, text: 'another thing', react: [":)",":)",":)"], comments: ["Hi!", "hello", "hey"] },
+    { id: 2, text: 'Something', react: [":)",":)",":)"], comments: ["Hi!", "hello", "hey"] },
+    { id: 3, text: 'another thing', react: [":)",":)",":)"], comments: ["Hi!", "hello", "hey"] },
 ];
 
 
@@ -20,8 +20,8 @@ class Post {
 
     static findById(id) {
         try {
-            const postData = postData.filter((post) => post.id === id)[0];
-            const post = new Post(postData);
+            const postsData = postData.filter((post) => post.id === id)[0];
+            const post = new Post(postsData);
             return post;
         } catch (err) {
             throw new Error('That post does not exist!');
