@@ -6,7 +6,7 @@ const cors = require('cors');
 
 //create a new express application
 const app = express();
-
+const Post = require('./post')
 
 // allows for json to be read
 app.use(express.json()) 
@@ -17,7 +17,8 @@ app.use(express.static("public"))
 
 //sets homepage to html
 app.get('/', (req, res) => {
-    res.send("hello world")
+    const postData = Post.all
+    res.send(postData)
 });
 
 //
