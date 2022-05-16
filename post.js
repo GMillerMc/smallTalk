@@ -1,7 +1,7 @@
 const postData = [
-    { id: 1, text: 'Zelda', react: ":)", comments: "Hi!" },
-    { id: 1, text: 'Something', react: ":)", comments: "Hi!" },
-    { id: 1, text: 'another thing', react: ":)", comments: "Hi!" },
+    { id: 1, text: 'Zelda', react: [":)",":)",":)"], comments: ["Hi!", "hello", "hey"] },
+    { id: 1, text: 'Something', react: [":)",":)",":)"], comments: ["Hi!", "hello", "hey"] },
+    { id: 1, text: 'another thing', react: [":)",":)",":)"], comments: ["Hi!", "hello", "hey"] },
 ];
 
 
