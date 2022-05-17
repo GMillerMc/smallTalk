@@ -63,6 +63,19 @@ app.post('/gif/new', (req, res) => {
     res.status(201).send(newGif);
 });
 
+app.patch('/:id', (req, res) => {
+    try {
+        const postId = parseInt(req.params.id);
+        const selectedpost = Post.findById(postId);
+        const newComment = selectedpost.comments
+        res.send(newComment);
+    } catch (err) {
+        console.log(err);
+        res.status(404).send(err);
+    }
+  })
+    
+
 app.delete('/gif/:id', (req, res) => {
     const gifId = parseInt(req.params.id);
     const gifToDestroy = Post.findById(gifId);
