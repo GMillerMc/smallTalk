@@ -35,12 +35,19 @@ class Post {
         return newPost;
     }
 
-    static update(comment, post){
+    static updateComment(comment, post){
         const array = post
         array.push(comment);
         console.log(array)
         return array
+    }
 
+    static updateReact(index, post){
+        const newNumber = 5
+        const array = post //this is the array of reacts
+        array[index] = newNumber // index tells me what array to target
+        console.log(array)
+        return array
     }
 
     destroy() {

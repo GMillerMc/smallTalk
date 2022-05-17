@@ -67,13 +67,11 @@ app.patch('/:id', (req, res) => {
     try {
         const postId = parseInt(req.params.id);
         const selectedpost = Post.findById(postId);
-        console.log(selectedpost.comments)
-        // const newComment = selectedpost.comments
         const comment = req.body.comments
-        const newComment = Post.update(comment,selectedpost.comments)
-        console.log(newComment)
-        // newComment.push(res)
-        res.send(newComment);
+        const react = req.body.react
+        const newReact = Post.updateReacts(react,selectedpost.react)
+        const newComment = Post.updateComment(comment,selectedpost.comments)
+        res.send(newComment, newReact);
     } catch (err) {
         console.log(err);
         res.status(404).send(err);
