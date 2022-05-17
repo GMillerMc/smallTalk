@@ -22,4 +22,26 @@ describe('API server', () => {
         request(api).get('/').expect(200, done);
     });
 
+    test('Gives 204 when trying to remove a post', (done) =>{
+		request(api)
+			.delete('/:id')
+			.expect(204, done)
+	})
+//not working//
+
+	
+	it('responds to post with status 201', (done)=>{
+		const postData = {
+			id: "",
+			text: ""
+		}
+
+		request(api)
+			.post('/new')
+			.send(postData)
+			.expect(201)
+			.expect({...postData,}, done) 
+	})
+
+
 });
