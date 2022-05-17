@@ -68,8 +68,8 @@ app.patch('/:id', (req, res) => {
         const postId = parseInt(req.params.id);
         const selectedpost = Post.findById(postId);
         const comment = req.body.comments
-        const react = req.body.react
-        const newReact = Post.updateReacts(react,selectedpost.react)
+        // const react = req.body.react
+        // const newReact = Post.updateReacts(react,selectedpost.react)
         const newComment = Post.updateComment(comment,selectedpost.comments)
         res.send(newComment, newReact);
     } catch (err) {
