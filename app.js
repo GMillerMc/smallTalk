@@ -90,7 +90,7 @@ app.patch('/:id', (req, res) => {
         // const newReact = Post.updateReacts(react,selectedpost.react)
         // const newComment = Post.updateReact(reactIndex,selectedpost.react[reactIndex])
        
-        res.send(reactIndex);
+        res.send(reactIndex[1]);
     } catch (err) {
         console.log(err);
         res.status(404).send(err);
