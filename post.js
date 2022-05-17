@@ -1,7 +1,7 @@
 const postData = [
-    { id: 1, text: 'Zelda', react: [":)",":)",":)"], comments: ["Hi!", "hello", "hey"] },
-    { id: 2, text: 'Something', react: [":)",":)",":)"], comments: ["Hi!", "hello", "hey"] },
-    { id: 3, text: 'another thing', react: [":)",":)",":)"], comments: ["Hi!", "hello", "hey"] },
+    { id: 1, text: 'Zelda', react: [0,0,0], comments: ["Hi!", "hello", "hey"]} ,
+    { id: 2, text: 'Something', react: [0,0,0], comments: ["Hi!", "hello", "hey"]},
+    { id: 3, text: 'another thing', react: [0,0,0], comments: ["Hi!", "hello", "hey"]},
 ];
 
 
@@ -40,5 +40,6 @@ class Post {
         postData.splice(postData.indexOf(post), 1);
     }
 }
+
 
 module.exports = Post, postData;
