@@ -44,7 +44,7 @@ class Post {
 
     static updateReact(index, post){
         const newNumber = 5
-        const array = post //this is the array of reacts
+        const reactNum = post //this is the array of reacts
         array[index] = newNumber // index tells me what array to target
         console.log(array)
         return array
