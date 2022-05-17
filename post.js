@@ -36,7 +36,9 @@ class Post {
     }
 
     static update(post){
-        
+        const newComment = post;
+        return newComment
+
     }
 
     destroy() {
