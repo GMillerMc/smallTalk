@@ -1,8 +1,4 @@
 /node_modules
 /package-lock.json
 .DS_Store
-<<<<<<< HEAD
 /coverage
-=======
-/coverage
->>>>>>> e85391fd6c1451be25ab41d401d51a7a091d8ada
