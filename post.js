@@ -37,8 +37,8 @@ class Post {
 
     static update(post){
         const array = postData.comments
-        const newComment = array.push(post);
-        return newComment
+        array.push(post);
+        return array
 
     }
 
