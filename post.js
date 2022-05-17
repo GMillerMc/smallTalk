@@ -38,6 +38,7 @@ class Post {
     static update(post){
         const array = postData.comments
         array.push(post);
+        console.log(array)
         return array
 
     }
