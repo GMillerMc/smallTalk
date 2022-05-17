@@ -71,7 +71,7 @@ app.patch('/:id', (req, res) => {
         // const react = req.body.react
         // const newReact = Post.updateReacts(react,selectedpost.react)
         const newComment = Post.updateComment(comment,selectedpost.comments)
-        res.send(newComment, newReact);
+        res.send(newComment);
     } catch (err) {
         console.log(err);
         res.status(404).send(err);
