@@ -57,13 +57,13 @@ app.post('/new', (req, res) => {
     res.status(201).send(newPost);
 });
 
-app.post('/gif/new', (req, res) => {
+app.post('/gifs/new', (req, res) => {
     const data = req.body;
     const newGif = Post.create(data);
     res.status(201).send(newGif);
 });
 
-app.delete('/gif/:id', (req, res) => {
+app.delete('/gifs/:id', (req, res) => {
     const gifId = parseInt(req.params.id);
     const gifToDestroy = Post.findById(gifId);
     gifToDestroy.destroy();
