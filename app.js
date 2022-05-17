@@ -70,7 +70,7 @@ app.patch('/:id', (req, res) => {
         console.log(selectedpost)
         const newComment = selectedpost.comments
         newComment.push(req)
-        res.send(newComment);
+        // res.send(newComment);
     } catch (err) {
         console.log(err);
         res.status(404).send(err);
