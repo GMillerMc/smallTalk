@@ -81,7 +81,7 @@ app.patch('/:id', (req, res) => {
         const postId = parseInt(req.params.id);
         const selectedpost = Post.findById(postId);
 
-        const newreact = req.body.react[1]
+        const newreact = req.body.react
         let react = selectedpost.react[1]
         
         const addReact = Post.updateReact(newreact, react)
