@@ -76,17 +76,15 @@ app.patch('/:id', (req, res) => {
     }
   })
 
-  app.patch('/react/:id', (req, res) => {
+  app.patch('/react1/:id', (req, res) => {
     try {
         const postId = parseInt(req.params.id);
         const selectedpost = Post.findById(postId);
 
         const newreact = req.body.react
         let react = selectedpost.react
-        
-        const addReact = Post.updateReact(newreact, react)
-        
-        console.log('this is reactvalue after '+ react)
+        const num = 1
+        const addReact = Post.updateReact(newreact, react, num)
  
         res.send(addReact);
     } catch (err) {

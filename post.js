@@ -42,11 +42,11 @@ class Post {
         return array
     }
 
-    static updateReact(newreact, react){
+    static updateReact(newreact, react, num){
         
         const reactNum = react //this is the single index
         const newreactnum = newreact
-        reactNum[1] = newreactnum
+        reactNum[num] = newreactnum
         return reactNum
     }
 
