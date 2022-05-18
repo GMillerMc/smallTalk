@@ -80,7 +80,7 @@ app.patch('/:id', (req, res) => {
     try {
         const postId = parseInt(req.params.id);
         const selectedpost = Post.findById(postId);
-
+        console.log('something')
         const newreact = req.body.react
         let react = selectedpost.react
         const num = 1
