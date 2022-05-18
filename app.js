@@ -59,7 +59,7 @@ app.post('/new', (req, res) => {
 
 app.post('/gifs/new', (req, res) => {
     const data = req.body;
-    const newGif = Post.create(data);
+    const newGif = Giphy.create(data);
     res.status(201).send(newGif);
 });
 
