@@ -46,7 +46,7 @@ class Post {
         
         const reactNum = react //this is the single index
         const newreactnum = newreact
-        reactNum = newreactnum
+        reactNum[1] = newreactnum
         return reactNum
     }
 
