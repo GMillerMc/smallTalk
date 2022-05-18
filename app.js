@@ -80,17 +80,15 @@ app.patch('/:id', (req, res) => {
     try {
         const postId = parseInt(req.params.id);
         const selectedpost = Post.findById(postId);
-        let reactIndex = selectedpost.react
-        console.log(reactIndex[1])
-        const react =req.body.react[reactIndex]
-        reactIndex[1] =react 
-        console.log(reactIndex)
-        // const react = req.body.react
-        // const react = req.body.react
-        // const newReact = Post.updateReacts(react,selectedpost.react)
-        // const newComment = Post.updateReact(reactIndex,selectedpost.react[reactIndex])
-       
-        res.send(reactIndex[1]);
+
+        const newreact = req.body.react[1]
+        let react = selectedpost.react[1]
+        
+        const addReact = Post.updateReact(newreact, react)
+        
+        console.log('this is reactvalue after '+ react)
+ 
+        res.send(addReact);
     } catch (err) {
         console.log(err);
         res.status(404).send(err);

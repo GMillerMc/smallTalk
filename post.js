@@ -42,12 +42,12 @@ class Post {
         return array
     }
 
-    static updateReact(index, post){
-        const newNumber = 5
-        const reactNum = post //this is the array of reacts
-        array[index] = newNumber // index tells me what array to target
-        console.log(array)
-        return array
+    static updateReact(newreact, react){
+        
+        const reactNum = react //this is the single index
+        const newreactnum = newreact
+        react = newreactnum
+        return newreactnum
     }
 
     destroy() {
