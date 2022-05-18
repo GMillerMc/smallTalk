@@ -1,7 +1,7 @@
 const postData = [
-    { id: 1, text: 'Zelda', react: [0,0,0], comments: ["Hi!", "hello", "hey"]} ,
-    { id: 2, text: 'Something', react: [0,0,0], comments: ["Hi!", "hello", "hey"]},
-    { id: 3, text: 'another thing', react: [0,0,0], comments: ["Hi!", "hello", "hey"]},
+    { id: 1, text: 'My cat is the greatest', react: [0,0,0], comments: ["No my cat is", "I prefer dogs!"]} ,
+    { id: 2, text: 'I am too overworked', react: [0,0,0], comments: ["This project has killed me", "I have dreams about code!", "I hate javascript :("]},
+    { id: 3, text: 'There are more wheels in the world than doors', react: [0,0,0], comments: ["I disagree there are way more doors", "Have you thought about toy cars?", "Yeah, but advent calenders"]},
 ];
 
 
