@@ -2,12 +2,14 @@ const request = require('supertest');
 // import server
 const server = require('./app');
 
+
 describe('API server', () => {
     let api;
     let testPost = {
         id: 12,
         text: 'oh hi there',
     };
+    
 
     beforeAll(() => {
         // start the server and store it in the api variable
@@ -59,57 +61,18 @@ describe('API server', () => {
         request(api).get('/no').expect(404, done);
     });
 
+    it('responds to delete /:id with status 204', async () => {
+        await request(api).delete('/1').expect(204);
 
+        const updatedPosts = await request(api).get('/:id');
 
+        expect(updatedPosts.body.length).toBe();
+    });
+
+    
 });
 
 
 
-    // it('should delete a post', () => {
-    //     const postToDestroyId = postsData.length;
-    //     const postToDestroy = postsData[postToDestroyId - 1];
-    //     postToDestroy.destroy();
-
-    //     expect(postToDestroy).toEqual({ id: postToDestroyId, ...testPost });
-    //     expect(postsData).not.toContain(postToDestroy);
-    // });
 
 
-    // test('Gives 204 when trying to remove a post', (done) =>{
-	// 	request(api)
-	// 		.delete('/:id')
-	// 		.expect(204, done)
-	// })
-
-    // test('Gives 204 when trying to remove a gif', (done) =>{
-	// 	request(api)
-	// 		.delete('/gif/:id')
-	// 		.expect(204, done)
-	// })
-//not working//
-
-	
-	// it('responds to post with status 201', (done)=>{
-	// 	const postData = {
-	// 		id: "",
-	// 		text: ""
-	// 	}
-
-	// 	request(api)
-	// 		.post('/new')
-	// 		.send(postData)
-	// 		.expect(201)
-	// 		.expect({...postData,}, done) 
-	// })
-
-    // it('responds to post new gif with status 201', (done)=>{
-	// 	const newGif = {
-			
-	// 	}
-
-	// 	request(api)
-	// 		.post('/gif/new')
-	// 		.send(newGif)
-	// 		.expect(201)
-	// 		.expect({...newGif,}, done) 
-	// })
