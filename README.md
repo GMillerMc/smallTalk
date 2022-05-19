@@ -23,7 +23,7 @@ A backend for an anonymous journal site.
 - Jest to test
 
 ## Process
-
+- Github projects used to list out targets and assign tasks
 - created the server.js file to initialise 
 - added the routes in the app.js file
 - created constructors for the posts and giphy api
