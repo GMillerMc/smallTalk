@@ -1,10 +1,7 @@
 # Small Talk Server
 
-[![Depfu](https://badges.depfu.com/badges/1604b40b0d078511c97243c8bf247664/overview.svg)](https://depfu.com/github/GMillerMc/smallTalk_Client?project_id=35440)
+[![Depfu](https://badges.depfu.com/badges/1604b40b0d078511c97243c8bf247664/overview.svg)](https://depfu.com/github/GMillerMc/smallTalk_Client?project_id=35440) [![Depfu](https://badges.depfu.com/badges/1604b40b0d078511c97243c8bf247664/status.svg)](https://depfu.com) [![Depfu](https://badges.depfu.com/badges/1604b40b0d078511c97243c8bf247664/count.svg)](https://depfu.com/github/GMillerMc/smallTalk_Client?project_id=35440)
 
-[![Depfu](https://badges.depfu.com/badges/1604b40b0d078511c97243c8bf247664/status.svg)](https://depfu.com)
-
-[![Depfu](https://badges.depfu.com/badges/1604b40b0d078511c97243c8bf247664/count.svg)](https://depfu.com/github/GMillerMc/smallTalk_Client?project_id=35440)
 
 ## Description
 
